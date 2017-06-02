@@ -19,7 +19,7 @@
   <build>
     <resources>
       <resource>
-        <directory>src/test/java/resources</directory>
+        <directory>src/test/resources</directory>
       </resource>
     </resources>
     <plugins>
