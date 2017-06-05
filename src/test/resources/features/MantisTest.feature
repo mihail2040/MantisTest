@@ -4,7 +4,7 @@ Feature: Bug report cycle
 
     Given User log in as "tester1"
     And report issue
-    When user fills the form "tester1_issue"
+    When user fills the form "tester1_issue_2"
     And submit issue
     Then user open bug table
     And user find "assigned (dev1)"

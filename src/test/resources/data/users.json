@@ -3,11 +3,8 @@
     "login": "administrator",
     "password": "1111"
   },
- /* "tester": {
-    "login": "tester",
-    "password": "password"
-  },
-  */"tester1": {
+
+  "tester1": {
     "login": "tester1",
     "password": "password"
   },

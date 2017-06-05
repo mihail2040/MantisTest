@@ -26,6 +26,21 @@
 
     "osVersion": "osVersion"
 
-  }
+  },
 
-}
+
+  "tester1_issue_2": {
+    "category": "[All Projects] General",
+    "reproducibility": "always",
+    "severity": "block",
+    "priority": "urgent",
+    "handler": "dev1",
+    "summary": "theme",
+    "description": "description",
+    "steps_to_reproduce": "reproduce steps",
+    "additional_info": "additional information",
+    "platform": "platform",
+    "os": "os",
+    "osVersion": "osVersion"
+  }
+  }

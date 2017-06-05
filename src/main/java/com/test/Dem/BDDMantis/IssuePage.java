@@ -39,8 +39,11 @@ public class IssuePage {
     @FindBy(xpath = "//*[@id=\"report_bug_form\"]/div/div[2]/div[2]/input")
     WebElement submitButton;
 
-    @FindBy(xpath = "//*[@id=\"profile_closed_link\"]/i")
+    @FindBy(xpath = "//*[@id=\"profile_open_link\"]/i")
     WebElement open_platform_button;
+
+    @FindBy (xpath = "//*[@id=\"profile_closed_link\"]/i")
+    WebElement close_platform_button;
 
     @FindBy(id = "platform")
     WebElement platform;
@@ -51,18 +54,18 @@ public class IssuePage {
     @FindBy(id = "os_build")
     WebElement os_version_field;
 
-
-
+    @FindBy(css = "#profile_open > table")
+    WebElement platformTable;
 
     public void Form_Filling(Issue issue) {
         new Select(category).selectByVisibleText(issue.getCategory());
         new Select(reproducibility).selectByVisibleText(issue.getReproducibility());
         new Select(severity).selectByVisibleText(issue.getSeverity());
         new Select(priority).selectByVisibleText(issue.getPriority());
-        try {
-            open_platform_button.click();
-        } catch (ElementNotVisibleException ignored) {}
 
+        if (!platformTable.isDisplayed()){
+            close_platform_button.click();
+    }
 
 
         platform.sendKeys(issue.getPlatform());
